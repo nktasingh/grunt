@@ -1,6 +1,6 @@
 {
   "name": "ng-form-builder",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Builds HTML/bootstrap froms from JSON schema definitions",
   "main": "ng-form-builder.js",
   "dependencies": {},
