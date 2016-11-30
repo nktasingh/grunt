@@ -54,7 +54,7 @@ module.exports = function(grunt) {
 				commitMessage: 'Release v%VERSION%',
 	      commitFiles: ['-a'],
         push: true,
-				// pushTo: ''
+				pushTo: 'origin'
       }
     }
 
