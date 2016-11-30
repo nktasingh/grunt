@@ -1,0 +1,7 @@
+<div class="form-group form-element">
+	<label ng-class="{'text-danger': field[key].$invalid && (field[key].$dirty || submitted)}">{{properties.title}}
+	<span ng-show="properties.required">&nbsp; Required</span>
+		<span ng-show="field[key].$invalid && !field[key].$error.required">&nbsp; Invalid input</span>
+	</label>
+	<input ng-required="properties.required" ng-disabled="disabled" class="form-control" name="{{key}}" ng-model="model[key]" ng-model-options="{'debounce':debounce}" ng-pattern="properties.pattern" type="text">
+</div>

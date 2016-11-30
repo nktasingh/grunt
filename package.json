@@ -1,0 +1,26 @@
+{
+  "name": "ng-form-builder",
+  "version": "1.0.0",
+  "description": "Builds HTML/bootstrap froms from JSON schema definitions",
+  "main": "ng-form-builder.js",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-bump": "^0.8.0",
+    "grunt-contrib-cssmin": "^1.0.2",
+    "grunt-contrib-uglify": "^2.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fusiform/ng-form-builder.git"
+  },
+  "author": "Henry Schuh <henry.schuh@fusiform.co>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fusiform/ng-form-builder/issues"
+  },
+  "homepage": "https://github.com/fusiform/ng-form-builder#readme"
+}

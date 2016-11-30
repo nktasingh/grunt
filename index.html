@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+		<script type="text/javascript" src="dist/ng-form-builder.min.js"></script>
+    <!-- <script type="text/javascript" src="ng-form-builder.js"></script> -->
+    <!-- <script type="text/javascript" src="diagram-input.js"></script> -->
+    <script type="text/javascript" src="test_assets/toolkit.js"></script>
+    <script type="text/javascript" src="testApp.js"></script>
+    <!-- <link rel="stylesheet" href="ng-form-builder.css"> -->
+		<link rel="stylesheet" href="dist/ng-form-builder.min.css">
+    <link rel="stylesheet" href="test_assets/toolkit-light.min.css">
+    <link rel="stylesheet" href="test_assets/application.css">
+</head>
+<body ng-app="FormBuilderTest" style="padding: 20px !important">
+
+<div class="container-fluid" ng-controller="TestCtrl">
+
+    <form-builder schema="testSchema" model="testModel" disabled="disableForm" debounce="0"></form-builder>
+    <hr>
+    <h3>Disable</h3>
+    <button class="btn btn-danger" ng-class="{'active': disableForm}" ng-click="disableForm = !disableForm">Disable All Fields</button>
+    <h3>Model</h3>
+    <pre>{{testModel | json}}</pre>
+    <h3>Schema</h3>
+    <pre>{{testSchema | json}}</pre>
+
+</div>
+
+</body>
+</html>

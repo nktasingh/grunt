@@ -1,0 +1,10 @@
+<div class="form-group form-element">
+	<label>{{properties.title}}<span ng-show="properties.required">&nbsp; Required</span></label>
+	<div class="checkbox custom-control custom-checkbox" ng-repeat="o in properties.enum">
+		<label>
+			<input type="checkbox" ng-model="model[key][o]" value="{{o}}" ng-disabled="disabled">
+			<span class="custom-control-indicator"></span>{{properties.map ? properties.map[o] : o}}
+
+		</label>
+	</div>
+</div>

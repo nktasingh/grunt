@@ -1,0 +1,13 @@
+<div class="diagram-input-container" ng-form="MeasurementsFormCtrl">
+    <div class="diagram-input">
+        <diagram-input-field ng-repeat="i in inputs" form-element="i" properties="schema[i.key]" model="model" image-height="imageHeight" image-width="imageWidth" disabled="disabled" debounce="debounce" focused-field="focusedField"></diagram-input-field>
+        <img class="diagram-input-image" ng-src="{{image}}" style="max-width: {{maxWidth}}px" alt="Measurement Diagram"/>
+    </div>
+</div>
+<p class="text-danger" ng-show="MeasurementsFormCtrl.$error.number || MeasurementsFormCtrl.$error.min || MeasurementsFormCtrl.$error.max">
+	<span ng-show="MeasurementsFormCtrl[focusedField.key].$error.min">This measurement is less than the minimum acceptable value.</span>
+	<span ng-show="MeasurementsFormCtrl[focusedField.key].$error.max">This measurement is greater than the maximum acceptable value.</span>
+	<span ng-show="MeasurementsFormCtrl[focusedField.key].$error.number">Measurement must be a numeric value.</span>
+	<span ng-hide="MeasurementsFormCtrl[focusedField.key].$error.min || MeasurementsFormCtrl[focusedField.key].$error.max || MeasurementsFormCtrl[focusedField.key].$error.number">Invalid measurements. Please correct the highlighted input.</span>
+</p>
+<p class="text-danger" ng-show="MeasurementsFormCtrl.$error.required && MeasurementsFormCtrl.$dirty">Please complete all required measurements.</p>

@@ -1,0 +1,465 @@
+/****** PLACE YOUR CUSTOM STYLES HERE ******/
+/*
+0. Color Glossary
+1. Global Styles – (body, paragraphs, lists, etc)
+2. Spacing
+3. Colors
+4. Header
+5. Page Structure
+6. Headings
+7. Text Styles
+8. Navigation
+9. Decoration
+10. Comments
+11. Extras
+*/
+
+
+/* ------------------------*/ /* ---------->>> 1. GLOBAL STYLES <<<-----------*/ /* ------------------------*/
+body {
+    padding: 100px 0 20px 0;
+    font-family: 'Avenir', sans-serif;
+    font-weight: 400;
+}
+html, body {
+    height: 100%;
+    background-color: #EEF4F9;
+}
+.icon-tabs .active .tab-title {
+  color: #1d97d5;
+  opacity: 1;
+}
+.icon-tabs .active .tab-title i {
+  color: #1d97d5;
+}
+.nav-text {
+  padding: 0;
+  margin-top: -3px;
+  font-size: 12px;
+}
+
+.table>thead>tr>th {
+  border-bottom: 2px solid #CAD6E1;
+  font-weight: 600;
+  color: #8CA0B3;
+}
+
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+    padding: 8px;
+    line-height: 1.3;
+    vertical-align: top;
+    border-top: 1px solid #EEF4F9;
+}
+
+.headerSortDown, .headerSortUp {
+    white-space: nowrap;
+    cursor: pointer;
+    font-weight: 600!important;
+    color: #09ACF8!important;
+    border-bottom-color: #09ACF8!important;
+}
+
+@media (max-width: 768px) {
+  .hideOnMobile {
+    display: none;
+  }
+  body {
+    padding: 0;
+  }
+}
+@media (min-width: 768px) {
+  .showOnMobile {
+    display: none;
+  }
+}
+@media (min-width: 990px) {
+  .showOnSmall {
+    display: none;
+  }
+}
+
+/* Header logo vector */
+
+@font-face {
+    font-family: 'fusiform';
+    src: url('../fonts/logo/fusiform.eot');
+    src: url('../fonts/logo/fusiform.eot?#iefix') format('embedded-opentype'), url('../fonts/logo/fusiform.woff') format('woff'), url('../fonts/logo/fusiform.ttf') format('truetype'), url('../fonts/logo/fusiform.svg#fusiform') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+.fusiform-icon:before {
+    display: inline-block;
+    font-family: 'fusiform';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.fusiform-icon:before {
+    content: '\0041';
+}
+.noselect {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Chrome/Safari/Opera */
+    -khtml-user-select: none;
+    /* Konqueror */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* IE/Edge */
+    user-select: none;
+    /* non-prefixed version, currently not supported by any browser */
+}
+
+
+/* ------------------------*/ /* ---------->>> 2. SPACING <<<-----------*/ /* ------------------------*/
+
+.pt10 { padding-top: 10px; }
+.pb10 { padding-bottom: 10px; }
+
+/* ------------------------*/ /* ---------->>> 3. COLORS <<<-----------*/ /* ------------------------*/
+
+.colorBrandMain { color: #16C4D6; } /* brand-main */
+.colorBrandAlt { color: #E5F5F8; } /* brand-alt */
+.colorMainGray { color: #8CA0B3; } /* heading text, border-light */
+.colorBorderDark { color: #CAD6E1; } /* border-dark */
+.colorIcon { color: #9DA9CD; } /* icon fill */
+.colorAccentBlue { color: #09ACF8; } /* accent-blue */
+.colorSearchFill { color: #F1FAFF; } /* search bar fill */
+.colorHeading { color: #4EBBE3; } /* heading text */
+.colorDeepGray { color: #556677; } /* greeting */
+.color { color: #979797; } /* filter */
+.colorSeaGreen { color: #B1E7EC; } /* tab-nav tile: active*/
+.colorPage { color: #A4DEF9; } /* pagination: active */
+.color { color: #D0021B; } /* filter */
+.color { color: #F8E71C; } /* filter */
+.color { color: #7ED321; } /* filter */
+.colorGround { color: #EEF4F9; } /* background */
+
+.bgAccentBlue { background-color: #09ACF8; }
+.bgSearchFill { background-color: #F1FAFF; }
+.bgBrandMain { background-color: #16C4D6; } /* brand-main */
+.bgSeaGreen { background-color: #B1E7EC; } /* tab-nav tile: active*/
+
+@media (max-width: 768px) {
+  .mobile-light {
+    color: #B1E7EC;
+  }
+}
+@media (min-width: 768px) {
+  .mobile-light {
+    color: #16C4D6;
+  }
+}
+
+/* ------------------------*/ /* ---------->>> 4. HEADER <<<-----------*/ /* ------------------------*/
+.avatar {
+  height: 70px;
+  width: auto;
+  display: block;
+  /*float: left;*/
+}
+.greeting {
+  display: inline-block;
+  text-align: right;
+  line-height: 4px;
+  height: 70px;
+  color: #556677;
+  /*margin-top: -4px;*/
+}
+
+.header {   /* fixed dashhead */
+    height: 70px;
+    width: 100%;
+    position: fixed;
+    right: 0;
+    /*margin-top: -170px;*/
+    top: 0;
+    overflow: hidden;
+    z-index: 999;
+}
+
+.iconav {   /* Left nav bar */
+  margin-top: 0px;
+  background-color: #FFF;
+}
+@media (min-width: 768px) {
+  .iconav-nav > li > a {   /* Increases height of iconav tiles */
+    padding: 20px;
+  }
+  .header {
+      height: 70px;
+      width: 100%;
+      /*background-color: #000;*/
+      position: fixed;
+      right: 0;
+      top: 0;
+      overflow: hidden;
+      background-color: #FFF;
+      /*z-index: 9;*/
+      /*padding: 15px 50px 0 0;*/
+  }
+}
+@media (max-width: 768px) {
+  .iconav-nav > li > a {
+    padding: 7px 16px 3px 16px;
+    width: 74.5px;
+  }
+  .iconav-nav {   /* Left nav bar */
+    padding: .5px;
+    background-color: #FFF;
+  }
+  .header {
+    background-color: #16C4D6;
+  }
+  .greeting {
+    color: #FFF;
+    /*display: none;*/
+  }
+}
+.iconav-nav > li.active > a {
+  color: #9DA9CD;
+  background-color: #FFF;
+}
+.iconav-nav > li.active > a:active, .iconav-nav > li.active > a:focus, .iconav-nav > li.active > a:hover {
+  color: #FFF;
+  background-color: #B1E7EC;
+}
+.iconav-brand {
+  height: 70px;
+  padding-top: 18px;
+}
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover, .navbar-nav>.active>a, .navbar-nav>.active>a:focus, .navbar-nav>.active>a:hover {
+  border: 0;
+}
+
+@media (min-width: 768px) and (max-width: 990px) {
+  .push2 {
+    padding-bottom: 130px;
+  }
+  .push3 {
+    padding-bottom: 0;
+  }
+}
+
+@media (min-width: 990px) {
+  .push {
+    height:80px;
+  }
+  .push2 {
+    padding-bottom: 50px;
+  }
+  .push3 {
+    padding-bottom: 30px;
+  }
+}
+
+
+/* ------------------------*/ /* ---------->>> 5. PAGE STRUCTURE <<<-----------*/ /* ------------------------*/
+
+.card {
+  background-color: #FFF;
+  -webkit-box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.18);
+  -moz-box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.18);
+  box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.18);
+  padding: 15px 25px 15px 25px;
+}
+.card-head {
+  padding: 4px 20px 3px 20px;
+  border-bottom: .5px solid #e5eaee;
+  margin-top: 20px;
+}
+.card-body {
+  padding: 10px 20px 20px 20px;
+}
+.card-icon {
+  padding: 9px 0px 0 12px;
+}
+
+/* ------------------------*/ /* ---------->>> 6. HEADINGS <<<-----------*/ /* ------------------------*/
+/*.heading {
+  /*color: #8CA0B3;
+  top: 0;
+  position: absolute;
+  margin-top: -1px;
+}
+.heading > .icon {
+  padding-left: 20px;
+}*/
+/* ------------------------*/ /* ---------->>> 7. TEXT STYLES <<<-----------*/ /* ------------------------*/
+
+.fw400 { font-weight: 400; } /* regular */
+.fw600 { font-weight: 600; } /* semibold */
+.fw700 { font-weight: 700; } /* bold */
+
+.fs25 { font-size: 25px; }
+.fs18 { font-size: 18px; }
+.fs16 { font-size: 16px; }
+.fs15 { font-size: 15px; }
+.fs14 { font-size: 14px; }
+.fs12 { font-size: 12px; }
+
+h1 {
+	font-size: 22px;
+  color: #09ACF8;
+  font-weight: 400;
+}
+h2 {
+	font-size: 15px;
+  color: #8CA0B3;
+  font-weight: 400;
+}
+h3 { font-size: 15px; font-weight: 400 }
+h4 { font-size:  }
+h5 { font-size: 15px; font-weight: 600  }
+h6 { font-size:  }
+h7 { font-size:  }
+h8 {
+  font-size: 13px;
+  font-weight: 200;
+}
+p { font-size: 14px; font-weight: 400; }
+
+@media (max-width: 768px) {
+  .sub { font-size: 13px; padding-left: 4px; }
+  h1 { font-size: 16px; }
+  h2 { font-size: 15px; }
+  h3 { font-size: 13px; font-weight: 400; line-height: .1; }
+  h8 { font-size: 13px; font-weight: 200; line-height: 1.5; }
+}
+
+
+
+/* ------------------------*/ /* ---------->>> 8. NAVIGATION <<<-----------*/ /* ------------------------*/
+
+.iconav .iconav-slider {
+  color: #9DA9CD;
+}
+.iconav .iconav-slider:active {
+  color: #FFF;
+}
+.iconav .icon-nav-slider .icon-nav-pills .icon-nav-nav {
+  :hover, :active {
+    background-color: #B1E7EC;
+  }
+}
+.hr-divider-nav {
+  background-color: #EEF4F9;
+}
+.hr-divider {
+  margin-top: 12px;
+}
+.hr-divider-content {
+  margin-top: -18px;
+}
+/*.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+  color: #fff;
+  background-color: #8CA0B3;
+  border-radius: 5px;
+}*/
+
+/* ------------------------*/ /* ---------->>> 9. DECORATION <<<-----------*/ /* ------------------------*/
+
+/* Buttons */
+.add {
+  width: 10px;
+  height: 4px;
+  padding: 10px 12px 10px 12px;
+  position: relative;
+  right: -5px;
+  top: -8px;
+  border-radius: 5px;
+  background-color: #09ACF8;
+  z-index: 99;
+  color: #FFF;
+  font-size: 13px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+.add:hover {
+  background-color: #55c9ff;
+  top: -10px;
+  transition: all 0.3s ease 0s;
+}
+.add:active {
+  background-color: #09ACF8;
+}
+.support {
+  position: fixed;
+  left: 9px;
+  bottom: 10px;
+  z-index: 9999;
+}
+.shadow {
+  -webkit-box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.18);
+  -moz-box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.18);
+  box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.18);
+}
+.addpatient {
+  border-radius: 50%;
+  background-color: #09ACF8;
+  color: #EEF4F9;
+  width: 40px;
+  height: 40px;
+  z-index: 99;
+  position: fixed;
+  /*top: 650px;*/
+  left: 15px;
+  bottom: 30px;
+  /*left: 15px;
+  bottom: 2px;*/
+}
+.addpatient:hover {
+  background-color: #EEF4F9;
+  color: #09ACF8;
+}
+
+/* Line */
+.line {
+  width: 100%;
+  border-bottom: 0.5px solid #8CA0B3;
+  margin-top: 30px;
+}
+
+/* Search */
+.btn-group, right-table-btns {
+ /*border: solid 1px #E4E4E4;*/
+ /*background-color: #FFF;*/
+}
+.searchbar{
+  padding: 1px;
+  border: solid 1px #e5eaee;
+  border-radius: 5px;
+  background-color: #F1FAFF;
+}
+
+.searchbar input{
+  border: 0;
+  box-shadow: none;
+  background-color: #F1FAFF;
+}
+
+.searchbar button{
+  margin: 2px 0 0 0;
+  background: none;
+  box-shadow: none;
+  border: 0;
+  color: #09ACF8;
+  padding: 0 8px 0 0px;
+  border-left: solid 1px #e5eaee;
+}
+
+.searchbar button:hover{
+  border: 0;
+  box-shadow: none;
+  border-left: solid 1px #ccc;
+}
+
+
+/* ------------------------*/ /* ---------->>> 10. ANIMATIONS <<<-----------*/ /* ------------------------*/
+
+/* ------------------------*/ /* ---------->>> 11. EXTRAS <<<-----------*/ /* ------------------------*/

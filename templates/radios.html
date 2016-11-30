@@ -1,0 +1,9 @@
+<div class="form-group form-element">
+	<label ng-class="{'text-danger': field[key].$invalid && (field[key].$dirty || submitted)}">{{properties.title}}<span ng-show="properties.required">&nbsp; Required</span></label>
+	<div class="radio-buttons-group btn-group">
+		<label ng-class="{'btn-primary active': o === model[key], 'disabled': disabled}" class="btn btn-default" ng-repeat="o in properties.enum">
+			<input type="radio" id="{{key+$index}}" value="{{o}}" name="{{key}}" ng-model="model[key]" ng-required="properties.required" ng-disabled="disabled" ng-hide="true">
+			{{properties.map ? properties.map[o] : o}}
+		</label>
+	</div>
+</div>

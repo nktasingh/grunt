@@ -1,0 +1,24 @@
+{
+  "name": "ng-form-builder",
+	"version": "1.0.0",
+  "homepage": "https://github.com/fusiform/ng-form-builder",
+  "authors": [
+    "Henry Schuh <henry.schuh@fusiform.co>"
+  ],
+  "description": "Builds HTML/bootstrap froms from JSON schema definitions.",
+  "main": "index.html",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-sanitize": "^1.5.8",
+    "jquery": "^3.1.1"
+  }
+}

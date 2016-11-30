@@ -1,0 +1,78 @@
+@media (max-width: 767px) {
+    body {
+        padding-top: 40px;
+        padding-bottom: 50px;
+    }
+    #header {
+        height: 100px;
+    }
+    .header-left {
+        padding-left: 10px;
+    }
+    .header-right {
+        padding-right: 15px;
+    }
+    .header-label {
+        margin-right: 736px;
+    }
+    #welcome-greeting {
+        display: none;
+    }
+    .header-icon-avatar {
+        display: none;
+    }
+    .mobile-table-hint {
+        display: inline;
+    }
+    .statcard-height {
+        padding-right: 5px;
+    }
+    .statcard-weight {
+        padding-left: 5px;
+    }
+
+
+}
+@media(max-width:400px) {
+    .patient-modButtons {
+        color:black;
+        font-weight:bold;
+        font-size:.8em;
+    }
+    .dashhead-id {
+        font-size:.6em;
+    }
+}
+@media(max-width:321px) {
+    .table {
+        font-size:.6em;
+    }
+}
+@media(max-width:990px) {
+    .modal-height {
+        padding-right:15px;
+    }
+    .modal-weight {
+        padding-left:15px;
+    }
+    .modal-weight-label {
+        position:absolute;
+        left:20px;
+        bottom:22px;
+    }
+}
+
+.hideOnMobile {
+    display: block;
+}
+.showOnMobile {
+    display: none;
+}
+@media (max-width:767px) {
+    .hideOnMobile {
+        display: none;
+    }
+    .showOnMobile {
+        display: block;
+    }
+}

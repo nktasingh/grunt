@@ -1,0 +1,68 @@
+.form-element > label {
+    font-weight: 500;
+}
+
+.form-element > label > span {
+    font-weight: 400;
+    opacity: 0.6;
+}
+
+.form-section {
+    background: white;
+    padding-top: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #CAD6E1;
+}
+
+.form-section .form-element {
+    padding-top: 0;
+    margin-bottom: 0;
+    border: 0;
+}
+
+.form-element {
+    border: 1px solid #CAD6E1;
+    background: white;
+    padding: 20px;
+}
+
+.radio-buttons-group {
+    float: none;
+    width: 100%;
+}
+
+.diagram-input-container {
+    display: flex;
+}
+
+.diagram-input {
+    margin: 0 auto;
+    position: relative;
+    font-size: 14px;
+}
+
+input.diagram-input-field {
+    position: absolute;
+    background: none;
+    text-align: center;
+    outline: none;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    -webkit-appearance: none;
+}
+
+input.diagram-input-field::-webkit-inner-spin-button,
+input.diagram-input-field::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input.diagram-input-field.ng-invalid.ng-dirty {
+    color: #E64759;
+}
+
+.diagram-input-image {
+    width: 100%;
+    height: auto;
+}

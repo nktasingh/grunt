@@ -1,0 +1,6 @@
+<div class="form-group form-element">
+	<label ng-class="{'text-danger': field[key].$invalid && (field[key].$dirty || submitted)}">{{properties.title}}<span ng-show="properties.required">&nbsp; Required</span></label>
+	<select class="form-control" name="{{key}}" ng-model="model[key]" ng-required="properties.required" ng-disabled="disabled">
+		<option ng-repeat="o in properties.enum">{{o}}</option>
+	</select>
+</div>

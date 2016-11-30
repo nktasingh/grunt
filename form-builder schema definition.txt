@@ -1,0 +1,95 @@
+# FORM-BUILDER SCHEMA DEFINITION
+
+## Stage properties
+- title (string)
+- stage_id (string)
+- step_id (string)
+	- "medical"/"device"/"delivery"
+
+## Form properties
+- fields (object) defines constraints on model data
+	- (each key is form element model identifier)
+	- type (string)
+		- "string"/"boolean"/"array"/"number"
+	- title (string)
+	- required (boolean)
+	- pattern (string)
+		- regular expression for validity
+	- min (number)
+		- field type must be "number"
+	- max (number)
+		- field type must be "number"
+	- relMin (string)
+		- evaluated expression referencing object "model"
+	- relMax (string)
+		- evaluated expression referencing object "model"
+	- enum (array)
+		- options for checkboxes/radiobuttons
+	- map (object)
+		- keys are elements in enum array
+		- values are corresponding display titles
+	- 
+- form (array) defines appearance of form
+
+## Form elements
+
+### Section
+{
+	type: "section",
+	items: [
+
+		(section's form elements defined here)
+
+	]
+}
+
+### Text input, single checkbox, checkbox group
+{
+	key: "(field key)"
+}
+
+### Radio buttons
+{
+	key: "(field key)",
+	type: "radios"
+}
+
+### Select dropdown
+{
+	key: "(field key)",
+	type: "select"
+}
+
+### Multi-line textarea
+{
+	key: "(field key)",
+	type: "textarea"
+}
+
+### Select dropdown
+{
+	key: "(field key)",
+	type: "select"
+}
+
+### Diagram input
+{
+	type: "diagram",
+	image: "(image url)",
+	maxWidth: (maximum horizontal size, default 800),
+	items: [
+		{
+			key: "(field key)",
+			x1: (top-left x coordinate, scaled 0..1),
+			y1: (top-left y coordinate, scaled 0..1)
+			x2: (bottom-right x coordinate, scaled 0..1)
+			y2: (bottom-right y coordinate, scaled 0..1)
+		}
+		...
+	]
+}
+
+### Submit button
+{
+	type: "submit"
+}

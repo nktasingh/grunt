@@ -1,0 +1,5 @@
+<form name="{{form_id}}" id="{{form_id}}" ng-submit="submit()">
+	<ng-repeat ng-repeat="elem in schema.form">
+		<form-builder-element schema="schema" form-id="form_id" form-element="elem" model="model" form-controller-object="getFormControllerObject(formElement.key)" disabled="disabled" debounce="debounce" submitted="submitted"></form-builder-element>
+	</ng-repeat>
+</form>
